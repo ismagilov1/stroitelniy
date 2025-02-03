@@ -18,7 +18,7 @@
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #007bff;
+  --primary: #00043c;
   --secondary: #6c757d;
   --success: #28a745;
   --info: #17a2b8;
@@ -33,6 +33,7 @@
   --breakpoint-xl: 1200px;
   --font-family-sans-serif: "Montserrat", serif;
   --font-family-monospace: "Montserrat", serif;
+  --bs-primary-bg-subtle: #cfe2ff;
 }
 
 *,
@@ -2691,7 +2692,7 @@ textarea.form-control.is-invalid {
   }
 }
 .btn:hover {
-  color: #212529;
+  background: #8d99ff;
   text-decoration: none;
 }
 .btn:focus,
@@ -3608,6 +3609,11 @@ input[type="button"].btn-block {
   display: block;
   padding: 0.25rem 1.5rem;
   color: #212529;
+}
+.btn-card {
+  width: 100%;
+  background: #00043c;
+  color: white;
 }
 
 .btn-group,
@@ -4980,9 +4986,16 @@ input[type="button"].btn-block {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   padding: 1.25rem;
+  height: 100%;
 }
-
+.card-layout {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .card-title {
+  font-weight: 700;
   margin-bottom: 0.75rem;
 }
 
@@ -5053,6 +5066,7 @@ input[type="button"].btn-block {
 }
 
 .card-img-top {
+  user-select: none;
   width: 100%;
   border-top-left-radius: calc(0.25rem - 1px);
   border-top-right-radius: calc(0.25rem - 1px);
@@ -6808,6 +6822,9 @@ a.close.disabled {
 
 .bg-primary {
   background-color: #007bff !important;
+}
+.bg-primary-subtle {
+  background-color: var(--bs-primary-bg-subtle) !important;
 }
 
 a.bg-primary:hover,

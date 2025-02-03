@@ -59,74 +59,17 @@
         </div>
       </div>
     </div>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Навбар</a>
+
+    <nav
+      class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
+    >
+      <div class="container">
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Переключатель навигации"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"
-                >Главная</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Ссылка</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Выпадающий список
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Действие</a></li>
-                <li><a class="dropdown-item" href="#">Другое действие</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled">Отключенная</a>
-            </li>
-          </ul>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Поиск"
-              aria-label="Поиск"
-            />
-            <button class="btn btn-outline-success" type="submit">Поиск</button>
-          </form>
-        </div>
-      </div>
-    </nav>
-    <nav
-      class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
-      id="ftco-navbar"
-    >
-      <div class="container-fluid">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#ftco-nav"
-          aria-controls="ftco-nav"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
@@ -159,7 +102,7 @@
             >
           </p>
         </div>
-        <div class="collapse navbar-collapse" id="ftco-nav">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
               <a href="index.html" class="nav-link">Главная</a>
@@ -167,13 +110,12 @@
             <li class="nav-item">
               <a href="about.html" class="nav-link">О компании</a>
             </li>
-
             <li class="nav-item active">
               <a href="catalog.html" class="nav-link">Каталог</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a href="blog.html" class="nav-link">Новости</a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a href="contact.html" class="nav-link">Контакты</a>
             </li>
@@ -236,19 +178,32 @@
                         alt="Строительная техника"
                       />
                       <div class="card-body">
-                        <h5 class="card-title">Заголовок карточки</h5>
-                        <p class="card-text">
-                          Небольшой пример текста, который должен основываться
-                          на названии карточки и с
-                        </p>
-                        <button
-                          type="button"
-                          class="btn btn-primary"
-                          data-bs-toggle="modal"
-                          data-bs-target="#exampleModal"
-                        >
-                          Запустите демо модального окна
-                        </button>
+                        <div class="card-layout">
+                          <div>
+                            <h6>
+                              <span class="badge bg-primary-subtle"
+                                >Цена по запросу</span
+                              >
+                            </h6>
+                            <h5 class="card-title">Lada 2110</h5>
+                            <p class="card-text pb-2">
+                              Дрель, объем двигателя 200л
+                            </p>
+                          </div>
+                          <div style="width: 100%">
+                            <p class="card-cost"></p>
+                            <button
+                              id="orderBtn"
+                              type="button"
+                              class="btn btn-card"
+                              data-bs-toggle="modal"
+                              data-item="Lada 2110"
+                              data-bs-target="#exampleModal"
+                            >
+                              Заказать
+                            </button>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <div class="card m-1" style="width: 22rem">
@@ -258,15 +213,30 @@
                         alt="Строительная техника"
                       />
                       <div class="card-body">
-                        <h5 class="card-title">Заголовок карточки</h5>
-                        <p class="card-text">
-                          Небольшой пример текста, который должен основываться
-                          на названии карточки и составлять основную часть
-                          содержимого карты.
-                        </p>
-                        <a href="#" class="btn btn-primary"
-                          >Перейти куда-нибудь</a
-                        >
+                        <div class="card-layout">
+                          <div>
+                            <h6>
+                              <span class="badge bg-primary-subtle"
+                                >Цена по запросу</span
+                              >
+                            </h6>
+                            <h5 class="card-title">Mercedes e100</h5>
+                            <p class="card-text pb-2">
+                              Небольшой пример текста, который должен
+                              основываться на названии карточки
+                            </p>
+                          </div>
+                          <button
+                            type="button"
+                            id="orderBtn"
+                            class="btn btn-card"
+                            data-bs-toggle="modal"
+                            data-item="Mercedes e100"
+                            data-bs-target="#exampleModal"
+                          >
+                            Заказать
+                          </button>
+                        </div>
                       </div>
                     </div>
                     <div class="card m-1" style="width: 22rem">
@@ -276,15 +246,29 @@
                         alt="Строительная техника"
                       />
                       <div class="card-body">
-                        <h5 class="card-title">Заголовок карточки</h5>
-                        <p class="card-text">
-                          Небольшой пример текста, который должен основываться
-                          на названии карточки и составлять основную часть
-                          содержимого карты.
-                        </p>
-                        <a href="#" class="btn btn-primary"
-                          >Перейти куда-нибудь</a
-                        >
+                        <div class="card-layout">
+                          <div>
+                            <h6>
+                              <span class="badge bg-primary-subtle"
+                                >Цена по запросу</span
+                              >
+                            </h6>
+                            <h5 class="card-title">Заголовок карточки</h5>
+                            <p class="card-text pb-2">
+                              Небольшой пример текста
+                            </p>
+                          </div>
+                          <button
+                            type="button"
+                            id="orderBtn"
+                            class="btn btn-card"
+                            data-bs-toggle="modal"
+                            data-item="Заголовок карточки"
+                            data-bs-target="#exampleModal"
+                          >
+                            Заказать
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -743,9 +727,9 @@
                               >Каталог</a
                             >
                           </li>
-                          <li>
+                          <!-- <li>
                             <a href="blog.html" class="py-1 d-block">Новости</a>
-                          </li>
+                          </li> -->
                           <li>
                             <a href="contact.html" class="py-1 d-block"
                               >Контакты</a
@@ -783,15 +767,26 @@
             class="col-md-3 py-lg-5 py-md-1 py-4 aside-stretch-right pl-lg-5"
           >
             <h2 class="footer-heading">Обратная связь</h2>
-            <form action="#" class="contact-form">
+            <form action="mail.php" class="contact-form">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Имя" />
-              </div>
-              <div class="form-group">
-                <input type="email" class="form-control" placeholder="Почта" />
+                <input
+                  name="name"
+                  type="text"
+                  class="form-control"
+                  placeholder="Имя"
+                />
               </div>
               <div class="form-group">
                 <input
+                  name="email"
+                  type="email"
+                  class="form-control"
+                  placeholder="Почта"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  name="phone"
                   type="tel"
                   class="form-control"
                   placeholder="Телефон"
@@ -800,8 +795,7 @@
               </div>
               <div class="form-group">
                 <textarea
-                  name=""
-                  id=""
+                  name="article"
                   cols="30"
                   rows="3"
                   class="form-control"
@@ -827,21 +821,75 @@
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">
-              Заголовок модального окна
-            </h1>
+            <p class="text-uppercase">Заказать</p>
             <button
               type="button"
-              class="btn-close"
+              class="btn"
               data-bs-dismiss="modal"
               aria-label="Закрыть"
-            ></button>
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-x-lg"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"
+                />
+              </svg>
+            </button>
           </div>
-          <div class="modal-body">...</div>
-          <div class="modal-footer">
+          <div class="modal-body">
+            <form action="" class="contact-form">
+              <div class="form-group">
+                <input
+                  name="name"
+                  type="text"
+                  class="form-control"
+                  placeholder="Имя"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  name="email"
+                  type="email"
+                  class="form-control"
+                  placeholder="Почта"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  name="phone"
+                  type="tel"
+                  class="form-control"
+                  placeholder="Телефон"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  name="article"
+                  id="article"
+                  cols="30"
+                  rows="3"
+                  class="form-control"
+                  placeholder="Сообщение"
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="form-control submit px-3">
+                  Отправить
+                </button>
+              </div>
+            </form>
+          </div>
+          <!-- <div class="modal-footer">
             <button
               type="button"
               class="btn btn-secondary"
@@ -849,10 +897,10 @@
             >
               Закрыть
             </button>
-            <button type="button" class="btn btn-primary">
+            <button type="button" class="btn btn-card">
               Сохранить изменения
             </button>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

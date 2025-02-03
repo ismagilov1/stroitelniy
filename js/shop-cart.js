@@ -15,3 +15,15 @@ $(".tab ul.tabs li a").on("click", function (g) {
     .slideDown();
   g.preventDefault();
 });
+
+const orderBtns = document.querySelectorAll(".btn-card");
+console.log(orderBtn);
+const input = document.getElementById("article");
+
+function order() {
+  input.value = this.dataset.item;
+}
+
+orderBtns.forEach((orderBtn) => {
+  orderBtn.addEventListener("click", order);
+});
